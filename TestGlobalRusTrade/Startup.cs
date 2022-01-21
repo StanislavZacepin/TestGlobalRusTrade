@@ -38,7 +38,7 @@ namespace TestGlobalRusTrade
                 app.UseDeveloperExceptionPage();
                
             }
-
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -46,6 +46,10 @@ namespace TestGlobalRusTrade
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
+                endpoints.MapControllerRoute(
+                    "default",
+                    "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
