@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TestGlobalRusTrade.Services.Data;
 
 namespace TestGlobalRusTrade.Controllers
 {
@@ -6,7 +7,7 @@ namespace TestGlobalRusTrade.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(weatherData._Weathers);
         }
     }
 }
