@@ -12,7 +12,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Shared\Partial\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
