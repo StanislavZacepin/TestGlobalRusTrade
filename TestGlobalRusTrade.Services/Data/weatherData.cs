@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TestGlobalRusTradeTest.Entity.Models;
+using TestGlobalRusTrade.Entity.Models;
 
 namespace TestGlobalRusTrade.Services.Data
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestGlobalRusTradeTest.Entity.Models
+namespace TestGlobalRusTrade.Entity.Models
 {
     public class Precipitation
     {

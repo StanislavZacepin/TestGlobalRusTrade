@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Services\TestGlobalRusTradeTest.Entity\TestGlobalRusTradeTest.Entity.csproj" />
+    <ProjectReference Include="..\Services\TestGlobalRusTradeTest.Entity\TestGlobalRusTrade.Entity.csproj" />
     <ProjectReference Include="..\TestGlobalRusTrade.Services\TestGlobalRusTrade.Services.csproj" />
   </ItemGroup>
 

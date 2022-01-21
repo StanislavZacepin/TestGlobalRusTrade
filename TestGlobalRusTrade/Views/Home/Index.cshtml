@@ -1,7 +1,5 @@
-﻿	
-<body>
-
-	
+﻿@model IEnumerable<TestGlobalRusTrade.Entity.Models.Weather>
+<body>	
 	<section class="home_banner_area">
 		<div class="banner_inner">
 			<div class="container">
@@ -26,19 +24,43 @@
 
 				<div class="offset-lg-1 col-lg-5">
 					<div class="main_title text-left">
-						<h2>let’s <br>
-							Introduce about <br>
-							myself</h2>
+						<h2>Погода <br>
+							Для города <b>N</b></h2>
+							
 						<p>
-							Whose given. Were gathered. There first subdue greater. Bearing you Whales heaven 
-							midst their. Beast creepeth. Fish days.
+							<table class=table>
+								<thead>
+								<tr>
+									<th>Дата</th>
+								<th>Минимальная температура</th>
+								<th>Максимальная температура</th>
+								<th>Давление</th>
+								<th>Влажность</th>
+								<th>Ветер</th>
+								<th>Осадки</th>
+								</tr>					
+								</thead>	
+								<tbody>
+								  @foreach (var weather in Model)
+								  {
+									<tr>
+										<td>@weather._Date.ToString("d")</td>
+										<td>@weather._MinimumTemperature °</td>
+										<td>@weather._MaximumTemperature °</td>
+										<td>@weather._Pressure</td>
+										<td>@weather._Humidity %</td>
+										<td>@weather._Wind</td>
+										<td>@weather._Precipitation</td>
+										
+									</tr>
+								}
+								</tbody>
+							</table>
 						</p>
 						<p>
-							Is give may shall likeness made yielding spirit a itself together created after sea 
-							is in beast beginning signs open god you're gathering whose gathered cattle let. 
-							Creature whales fruit unto meat the life beginning all in under give two.
+							Нажми обнавить и погода поменяеться :)
 						</p>
-						<a class="primary_btn" href="#"><span>Download CV</span></a>
+						<a  class="primary_btn" asp-controller="Home" asp-action="Index" ><span>Обновить</span></a>
 					</div>
 				</div>
 			</div>
