@@ -38,7 +38,7 @@ namespace TestGlobalRusTrade
                 app.UseDeveloperExceptionPage();
                
             }
-            app.UseStaticFiles();
+            app.UseStaticFiles();// для выдачи автоматически файлов из паки wwwroot Забыл дабавить комит 
             app.UseRouting();
 
             app.UseAuthorization();
