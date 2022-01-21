@@ -1,13 +1,28 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
+<html lang="en">
 
-<html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="~/img/favicon.png" type="image/png">
+	<title>TestGlobalRusTrade</title>
+	<!-- Bootstrap CSS -->
+	@await Html.PartialAsync("Partial/_Styles")
 </head>
+
 <body>
-    <div>
-        @RenderBody()
-    </div>
+
+	
+	<partial name="Partial/_Header"/>
+	
+	@RenderBody()
+	
+
+	<partial name="Partial/_Footer"/>
+	
+	
+	<partial name="Partial/_Scripts"/>
 </body>
+
 </html>
