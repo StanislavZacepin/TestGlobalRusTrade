@@ -22,27 +22,23 @@ namespace TestGlobalRusTrade
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+       
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddControllersWithViews();
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestGlobalRusTrade", Version = "v1" });
-            });
+           
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestGlobalRusTrade v1"));
+               
             }
-
+            app.UseStaticFiles();// для выдачи автоматически файлов из паки wwwroot Забыл дабавить комит 
             app.UseRouting();
 
             app.UseAuthorization();
@@ -50,6 +46,10 @@ namespace TestGlobalRusTrade
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+
+                endpoints.MapControllerRoute(
+                    "default",
+                    "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
