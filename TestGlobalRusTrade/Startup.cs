@@ -25,7 +25,7 @@ namespace TestGlobalRusTrade
        
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddControllersWithViews();
             services.AddControllers();
            
         }
